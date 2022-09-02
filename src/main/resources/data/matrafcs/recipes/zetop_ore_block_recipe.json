@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "matrafcs:zetop"
+    },
+    "1": {
+      "item": "matrafcs:zetop"
+    },
+    "2": {
+      "item": "matrafcs:zetop"
+    },
+    "3": {
+      "item": "matrafcs:zetop"
+    },
+    "4": {
+      "item": "matrafcs:zetop"
+    },
+    "5": {
+      "item": "matrafcs:zetop"
+    },
+    "6": {
+      "item": "matrafcs:zetop"
+    },
+    "7": {
+      "item": "matrafcs:zetop"
+    },
+    "8": {
+      "item": "matrafcs:zetop"
+    }
+  },
+  "result": {
+    "item": "matrafcs:zetop_block",
+    "count": 1
+  }
+}

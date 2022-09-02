@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0 2",
+    "3 5"
+  ],
+  "key": {
+    "0": {
+      "item": "matrafcs:zetop"
+    },
+    "2": {
+      "item": "matrafcs:zetop"
+    },
+    "3": {
+      "item": "matrafcs:zetop"
+    },
+    "5": {
+      "item": "matrafcs:zetop"
+    }
+  },
+  "result": {
+    "item": "matrafcs:zetop_armor_armor_boots",
+    "count": 1
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "matrafcs:zetop_ore",
+    "matrafcs:zetop_block",
+    "matrafcs:lipott_ore",
+    "matrafcs:lipott_block"
+  ]
+}

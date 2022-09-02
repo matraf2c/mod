@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "matrafcs:zetop_block"
+    }
+  ],
+  "result": {
+    "item": "matrafcs:zetop",
+    "count": 9
+  }
+}

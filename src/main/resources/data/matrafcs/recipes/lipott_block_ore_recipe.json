@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "matrafcs:lipott_block"
+    }
+  ],
+  "result": {
+    "item": "matrafcs:lipott",
+    "count": 9
+  }
+}

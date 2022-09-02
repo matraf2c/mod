@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "matrafcs:zetop_block"
+    },
+    "1": {
+      "item": "minecraft:bookshelf"
+    },
+    "2": {
+      "item": "matrafcs:zetop_block"
+    },
+    "3": {
+      "item": "minecraft:bookshelf"
+    },
+    "4": {
+      "item": "matrafcs:zetop_block"
+    },
+    "5": {
+      "item": "minecraft:bookshelf"
+    },
+    "6": {
+      "item": "matrafcs:zetop_block"
+    },
+    "7": {
+      "item": "minecraft:bookshelf"
+    },
+    "8": {
+      "item": "matrafcs:zetop_block"
+    }
+  },
+  "result": {
+    "item": "matrafcs:magic_zetop",
+    "count": 1
+  }
+}

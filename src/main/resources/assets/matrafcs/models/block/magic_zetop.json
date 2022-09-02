@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "matrafcs:blocks/magiczetop",
+    "up": "matrafcs:blocks/magiczetop",
+    "north": "matrafcs:blocks/magiczetop",
+    "east": "matrafcs:blocks/magiczetop",
+    "south": "matrafcs:blocks/magiczetop",
+    "west": "matrafcs:blocks/magiczetop",
+    "particle": "matrafcs:blocks/magiczetop"
+  }
+}

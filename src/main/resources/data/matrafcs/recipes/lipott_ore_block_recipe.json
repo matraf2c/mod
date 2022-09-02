@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "matrafcs:lipott"
+    },
+    "1": {
+      "item": "matrafcs:lipott"
+    },
+    "2": {
+      "item": "matrafcs:lipott"
+    },
+    "3": {
+      "item": "matrafcs:lipott"
+    },
+    "4": {
+      "item": "matrafcs:lipott"
+    },
+    "5": {
+      "item": "matrafcs:lipott"
+    },
+    "6": {
+      "item": "matrafcs:lipott"
+    },
+    "7": {
+      "item": "matrafcs:lipott"
+    },
+    "8": {
+      "item": "matrafcs:lipott"
+    }
+  },
+  "result": {
+    "item": "matrafcs:lipott_block",
+    "count": 1
+  }
+}

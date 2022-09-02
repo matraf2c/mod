@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "3 5",
+    "6 8"
+  ],
+  "key": {
+    "0": {
+      "item": "matrafcs:zetop"
+    },
+    "1": {
+      "item": "matrafcs:zetop"
+    },
+    "2": {
+      "item": "matrafcs:zetop"
+    },
+    "3": {
+      "item": "matrafcs:zetop"
+    },
+    "5": {
+      "item": "matrafcs:zetop"
+    },
+    "6": {
+      "item": "matrafcs:zetop"
+    },
+    "8": {
+      "item": "matrafcs:zetop"
+    }
+  },
+  "result": {
+    "item": "matrafcs:zetop_armor_armor_leggings",
+    "count": 1
+  }
+}

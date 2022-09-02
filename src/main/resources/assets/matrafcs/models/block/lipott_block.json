@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "matrafcs:blocks/lipott_ore_block",
+    "particle": "matrafcs:blocks/lipott_ore_block"
+  }
+}
