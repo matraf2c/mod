@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    " 4 ",
+    " 7 "
+  ],
+  "key": {
+    "0": {
+      "item": "matrafcs:zetop"
+    },
+    "1": {
+      "item": "matrafcs:zetop"
+    },
+    "2": {
+      "item": "matrafcs:zetop"
+    },
+    "4": {
+      "item": "minecraft:stick"
+    },
+    "7": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "matrafcs:zetop_pickaxe",
+    "count": 1
+  }
+}

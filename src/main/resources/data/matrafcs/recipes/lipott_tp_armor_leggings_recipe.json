@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "3 5",
+    "6 8"
+  ],
+  "key": {
+    "0": {
+      "item": "matrafcs:lipott"
+    },
+    "1": {
+      "item": "matrafcs:lipott"
+    },
+    "2": {
+      "item": "matrafcs:lipott"
+    },
+    "3": {
+      "item": "matrafcs:lipott"
+    },
+    "5": {
+      "item": "matrafcs:lipott"
+    },
+    "6": {
+      "item": "matrafcs:lipott"
+    },
+    "8": {
+      "item": "matrafcs:lipott"
+    }
+  },
+  "result": {
+    "item": "matrafcs:lipott_tp_armor_leggings",
+    "count": 1
+  }
+}

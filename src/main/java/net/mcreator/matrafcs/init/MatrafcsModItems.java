@@ -18,6 +18,7 @@ import net.mcreator.matrafcs.item.Zetop_ArmorArmorItem;
 import net.mcreator.matrafcs.item.ZetopSwordItem;
 import net.mcreator.matrafcs.item.ZetopPickaxeItem;
 import net.mcreator.matrafcs.item.ZetopItem;
+import net.mcreator.matrafcs.item.Lipott_tp_ArmorItem;
 import net.mcreator.matrafcs.item.LipottItem;
 import net.mcreator.matrafcs.MatrafcsMod;
 
@@ -42,6 +43,14 @@ public class MatrafcsModItems {
 			() -> new Zetop_ArmorArmorItem.Boots());
 	public static final RegistryObject<Item> ZETOP_SWORD = REGISTRY.register("zetop_sword", () -> new ZetopSwordItem());
 	public static final RegistryObject<Item> ZETOP_PICKAXE = REGISTRY.register("zetop_pickaxe", () -> new ZetopPickaxeItem());
+	public static final RegistryObject<Item> LIPOTT_TP_ARMOR_HELMET = REGISTRY.register("lipott_tp_armor_helmet",
+			() -> new Lipott_tp_ArmorItem.Helmet());
+	public static final RegistryObject<Item> LIPOTT_TP_ARMOR_CHESTPLATE = REGISTRY.register("lipott_tp_armor_chestplate",
+			() -> new Lipott_tp_ArmorItem.Chestplate());
+	public static final RegistryObject<Item> LIPOTT_TP_ARMOR_LEGGINGS = REGISTRY.register("lipott_tp_armor_leggings",
+			() -> new Lipott_tp_ArmorItem.Leggings());
+	public static final RegistryObject<Item> LIPOTT_TP_ARMOR_BOOTS = REGISTRY.register("lipott_tp_armor_boots",
+			() -> new Lipott_tp_ArmorItem.Boots());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

@@ -2,6 +2,7 @@
   "item.matrafcs.zetop_armor_armor_helmet": "Zetop_Armor Helmet",
   "item.matrafcs.lipott": "Lipott",
   "item.matrafcs.zetop_pickaxe": "Zetop Pickaxe",
+  "item.matrafcs.lipott_tp_armor_boots": "Lipott_tp_ Boots",
   "item.matrafcs.zetop_sword": "Zetop Sword",
   "item.matrafcs.zetop_armor_armor_chestplate": "Zetop_Armor Chestplate",
   "entity.matrafcs.diagan": "Diagan",
@@ -13,7 +14,10 @@
   "item.matrafcs.zetop_armor_armor_boots": "Zetop_Armor Boots",
   "itemGroup.tabmatraf_2c": "Matraf 2c",
   "block.matrafcs.lipott_ore": "Lipott Ore",
+  "item.matrafcs.lipott_tp_armor_chestplate": "Lipott_tp_ Chestplate",
+  "item.matrafcs.lipott_tp_armor_leggings": "Lipott_tp_ Leggings",
   "block.matrafcs.zetop_block": "Block of Zetop",
   "block.matrafcs.zetop_ore": "Zetop Ore",
-  "item.matrafcs.diagan_spawn_egg": "Diagan Spawn Egg"
+  "item.matrafcs.diagan_spawn_egg": "Diagan Spawn Egg",
+  "item.matrafcs.lipott_tp_armor_helmet": "Lipott_tp_ Helmet"
 }

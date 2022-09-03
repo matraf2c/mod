@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "3 5"
+  ],
+  "key": {
+    "0": {
+      "item": "matrafcs:lipott"
+    },
+    "1": {
+      "item": "matrafcs:lipott"
+    },
+    "2": {
+      "item": "matrafcs:lipott"
+    },
+    "3": {
+      "item": "matrafcs:lipott"
+    },
+    "5": {
+      "item": "matrafcs:lipott"
+    }
+  },
+  "result": {
+    "item": "matrafcs:lipott_tp_armor_helmet",
+    "count": 1
+  }
+}
