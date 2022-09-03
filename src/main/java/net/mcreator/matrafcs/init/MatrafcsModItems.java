@@ -16,6 +16,7 @@ import net.minecraft.world.item.BlockItem;
 
 import net.mcreator.matrafcs.item.Zetop_ArmorArmorItem;
 import net.mcreator.matrafcs.item.ZetopSwordItem;
+import net.mcreator.matrafcs.item.ZetopPickaxeItem;
 import net.mcreator.matrafcs.item.ZetopItem;
 import net.mcreator.matrafcs.item.LipottItem;
 import net.mcreator.matrafcs.MatrafcsMod;
@@ -40,6 +41,7 @@ public class MatrafcsModItems {
 	public static final RegistryObject<Item> ZETOP_ARMOR_ARMOR_BOOTS = REGISTRY.register("zetop_armor_armor_boots",
 			() -> new Zetop_ArmorArmorItem.Boots());
 	public static final RegistryObject<Item> ZETOP_SWORD = REGISTRY.register("zetop_sword", () -> new ZetopSwordItem());
+	public static final RegistryObject<Item> ZETOP_PICKAXE = REGISTRY.register("zetop_pickaxe", () -> new ZetopPickaxeItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

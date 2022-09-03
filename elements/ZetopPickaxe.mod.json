@@ -3,14 +3,14 @@
   "_type": "tool",
   "definition": {
     "renderType": 0,
-    "texture": "zetop_sword",
+    "texture": "zetop_pickaxe",
     "customModelName": "Normal",
-    "name": "Zetop Sword",
+    "name": "Zetop Pickaxe",
     "specialInfo": [],
     "creativeTab": {
       "value": "CUSTOM:Matraf2c"
     },
-    "toolType": "Sword",
+    "toolType": "Pickaxe",
     "harvestLevel": 1,
     "efficiency": 4.0,
     "attackSpeed": 1.0,
@@ -19,16 +19,12 @@
     "usageCount": 100,
     "blocksAffected": [],
     "hasGlow": false,
-    "repairItems": [
-      {
-        "value": "CUSTOM:Zetop"
-      }
-    ],
+    "repairItems": [],
     "immuneToFire": false,
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
-    "onEntityHitWith": {
-      "name": "ZetopSwordLivingEntityIsHitWithTool"
+    "onBlockDestroyedWithTool": {
+      "name": "ZetopPickaxeBlockDestroyedWithTool"
     }
   }
 }

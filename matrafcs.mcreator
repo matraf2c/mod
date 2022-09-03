@@ -433,6 +433,46 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "zetop_sword_recipe"
+    },
+    {
+      "name": "ZetopPickaxeBlockDestroyedWithTool",
+      "type": "procedure",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "zetop_pickaxe_block_destroyed_with_tool",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ZetopPickaxe",
+      "type": "tool",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "zetop_pickaxe"
     }
   ],
   "variable_elements": [],
@@ -441,6 +481,7 @@
     "en_us": {
       "item.matrafcs.zetop_armor_armor_helmet": "Zetop_Armor Helmet",
       "item.matrafcs.lipott": "Lipott",
+      "item.matrafcs.zetop_pickaxe": "Zetop Pickaxe",
       "item.matrafcs.zetop_sword": "Zetop Sword",
       "item.matrafcs.zetop_armor_armor_chestplate": "Zetop_Armor Chestplate",
       "entity.matrafcs.diagan": "Diagan",

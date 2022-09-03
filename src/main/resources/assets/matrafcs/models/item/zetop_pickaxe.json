@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "matrafcs:items/zetop_sword"
+    "layer0": "matrafcs:items/zetop_pickaxe"
   }
 }
