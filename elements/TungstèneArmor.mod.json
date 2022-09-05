@@ -3,20 +3,20 @@
   "_type": "armor",
   "definition": {
     "enableHelmet": true,
-    "textureHelmet": "tungstène_head",
+    "textureHelmet": "tungstene_head",
     "enableBody": true,
-    "textureBody": "tungstène_body",
+    "textureBody": "tungstene_body",
     "enableLeggings": true,
-    "textureLeggings": "tungstène_leggings",
+    "textureLeggings": "tungstene_leggings",
     "enableBoots": true,
-    "textureBoots": "tungstène_boots",
+    "textureBoots": "tungstene_boots",
     "onHelmetTick": {
       "name": "TungsteneArmorHelmetTickEvent"
     },
     "creativeTab": {
       "value": "COMBAT"
     },
-    "armorTextureFile": "tungstène",
+    "armorTextureFile": "tungstene",
     "helmetName": "Tungstène Helmet",
     "bodyName": "Tungstène Chestplate",
     "leggingsName": "Tungstène Leggings",

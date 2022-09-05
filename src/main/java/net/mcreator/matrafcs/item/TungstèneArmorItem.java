@@ -71,7 +71,7 @@ public abstract class TungstèneArmorItem extends ArmorItem {
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "matrafcs:textures/models/armor/tungstène_layer_1.png";
+			return "matrafcs:textures/models/armor/tungstene_layer_1.png";
 		}
 
 		@Override
@@ -87,7 +87,7 @@ public abstract class TungstèneArmorItem extends ArmorItem {
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "matrafcs:textures/models/armor/tungstène_layer_1.png";
+			return "matrafcs:textures/models/armor/tungstene_layer_1.png";
 		}
 	}
 
@@ -98,7 +98,7 @@ public abstract class TungstèneArmorItem extends ArmorItem {
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "matrafcs:textures/models/armor/tungstène_layer_2.png";
+			return "matrafcs:textures/models/armor/tungstene_layer_2.png";
 		}
 	}
 
@@ -109,7 +109,7 @@ public abstract class TungstèneArmorItem extends ArmorItem {
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "matrafcs:textures/models/armor/tungstène_layer_1.png";
+			return "matrafcs:textures/models/armor/tungstene_layer_1.png";
 		}
 	}
 }
