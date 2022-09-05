@@ -17,6 +17,7 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
 import net.mcreator.matrafcs.entity.DiaganEntity;
+import net.mcreator.matrafcs.entity.AirBossEntity;
 import net.mcreator.matrafcs.MatrafcsMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -27,6 +28,11 @@ public class MatrafcsModEntities {
 					.setUpdateInterval(3).setCustomClientFactory(DiaganEntity::new)
 
 					.sized(0.6f, 0.7f));
+	public static final RegistryObject<EntityType<AirBossEntity>> AIR_BOSS = register("air_boss",
+			EntityType.Builder.<AirBossEntity>of(AirBossEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+					.setUpdateInterval(3).setCustomClientFactory(AirBossEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -36,11 +42,13 @@ public class MatrafcsModEntities {
 	public static void init(FMLCommonSetupEvent event) {
 		event.enqueueWork(() -> {
 			DiaganEntity.init();
+			AirBossEntity.init();
 		});
 	}
 
 	@SubscribeEvent
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
 		event.put(DIAGAN.get(), DiaganEntity.createAttributes().build());
+		event.put(AIR_BOSS.get(), AirBossEntity.createAttributes().build());
 	}
 }

@@ -46,7 +46,7 @@ public class ZetopOreFeature extends OreFeature {
 		CONFIGURED_FEATURE = FeatureUtils.register("matrafcs:zetop_ore", FEATURE,
 				new OreConfiguration(ZetopOreFeatureRuleTest.INSTANCE, MatrafcsModBlocks.ZETOP_ORE.get().defaultBlockState(), 5));
 		PLACED_FEATURE = PlacementUtils.register("matrafcs:zetop_ore", CONFIGURED_FEATURE, List.of(CountPlacement.of(24), InSquarePlacement.spread(),
-				HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(255)), BiomeFilter.biome()));
+				HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(75)), BiomeFilter.biome()));
 		return FEATURE;
 	}
 

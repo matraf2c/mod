@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "matrafcs:tungstene_block"
+    }
+  ],
+  "result": {
+    "item": "matrafcs:tungstene_dust",
+    "count": 9
+  }
+}

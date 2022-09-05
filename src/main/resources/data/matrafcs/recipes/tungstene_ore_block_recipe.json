@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "matrafcs:tungstene_dust"
+    },
+    "1": {
+      "item": "matrafcs:tungstene_dust"
+    },
+    "2": {
+      "item": "matrafcs:tungstene_dust"
+    },
+    "3": {
+      "item": "matrafcs:tungstene_dust"
+    },
+    "4": {
+      "item": "matrafcs:tungstene_dust"
+    },
+    "5": {
+      "item": "matrafcs:tungstene_dust"
+    },
+    "6": {
+      "item": "matrafcs:tungstene_dust"
+    },
+    "7": {
+      "item": "matrafcs:tungstene_dust"
+    },
+    "8": {
+      "item": "matrafcs:tungstene_dust"
+    }
+  },
+  "result": {
+    "item": "matrafcs:tungstene_block",
+    "count": 1
+  }
+}

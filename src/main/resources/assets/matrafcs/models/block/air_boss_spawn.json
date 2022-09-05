@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "matrafcs:blocks/polished_deepslate",
+    "up": "matrafcs:blocks/polished_deepslate",
+    "north": "matrafcs:blocks/polished_deepslate",
+    "east": "matrafcs:blocks/polished_deepslate",
+    "south": "matrafcs:blocks/polished_deepslate",
+    "west": "matrafcs:blocks/polished_deepslate",
+    "particle": "matrafcs:blocks/polished_deepslate"
+  }
+}

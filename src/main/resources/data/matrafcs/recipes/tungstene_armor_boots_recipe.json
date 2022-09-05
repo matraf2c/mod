@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0 2",
+    "3 5"
+  ],
+  "key": {
+    "0": {
+      "item": "matrafcs:tungstene_dust"
+    },
+    "2": {
+      "item": "matrafcs:tungstene_dust"
+    },
+    "3": {
+      "item": "matrafcs:tungstene_dust"
+    },
+    "5": {
+      "item": "matrafcs:tungstene_dust"
+    }
+  },
+  "result": {
+    "item": "matrafcs:tungstene_armor_boots",
+    "count": 1
+  }
+}

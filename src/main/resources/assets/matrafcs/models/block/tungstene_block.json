@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "matrafcs:blocks/tungstene_block",
+    "particle": "matrafcs:blocks/tungstene_block"
+  }
+}

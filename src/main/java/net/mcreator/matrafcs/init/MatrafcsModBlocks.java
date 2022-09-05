@@ -12,9 +12,12 @@ import net.minecraft.world.level.block.Block;
 
 import net.mcreator.matrafcs.block.ZetopOreBlock;
 import net.mcreator.matrafcs.block.ZetopBlockBlock;
+import net.mcreator.matrafcs.block.TungstèneOreBlock;
+import net.mcreator.matrafcs.block.TungstèneBlockBlock;
 import net.mcreator.matrafcs.block.MagicZetopBlock;
 import net.mcreator.matrafcs.block.LipottOreBlock;
 import net.mcreator.matrafcs.block.LipottBlockBlock;
+import net.mcreator.matrafcs.block.AirBossSpawnBlock;
 import net.mcreator.matrafcs.MatrafcsMod;
 
 public class MatrafcsModBlocks {
@@ -24,4 +27,7 @@ public class MatrafcsModBlocks {
 	public static final RegistryObject<Block> MAGIC_ZETOP = REGISTRY.register("magic_zetop", () -> new MagicZetopBlock());
 	public static final RegistryObject<Block> LIPOTT_ORE = REGISTRY.register("lipott_ore", () -> new LipottOreBlock());
 	public static final RegistryObject<Block> LIPOTT_BLOCK = REGISTRY.register("lipott_block", () -> new LipottBlockBlock());
+	public static final RegistryObject<Block> AIR_BOSS_SPAWN = REGISTRY.register("air_boss_spawn", () -> new AirBossSpawnBlock());
+	public static final RegistryObject<Block> TUNGSTENE_ORE = REGISTRY.register("tungstene_ore", () -> new TungstèneOreBlock());
+	public static final RegistryObject<Block> TUNGSTENE_BLOCK = REGISTRY.register("tungstene_block", () -> new TungstèneBlockBlock());
 }
