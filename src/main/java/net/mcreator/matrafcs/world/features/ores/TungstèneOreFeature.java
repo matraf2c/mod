@@ -47,7 +47,7 @@ public class TungstèneOreFeature extends OreFeature {
 				new OreConfiguration(TungstèneOreFeatureRuleTest.INSTANCE, MatrafcsModBlocks.TUNGSTENE_ORE.get().defaultBlockState(), 7));
 		PLACED_FEATURE = PlacementUtils.register("matrafcs:tungstene_ore", CONFIGURED_FEATURE,
 				List.of(CountPlacement.of(11), InSquarePlacement.spread(),
-						HeightRangePlacement.uniform(VerticalAnchor.absolute(1), VerticalAnchor.absolute(63)), BiomeFilter.biome()));
+						HeightRangePlacement.uniform(VerticalAnchor.absolute(1), VerticalAnchor.absolute(120)), BiomeFilter.biome()));
 		return FEATURE;
 	}
 
@@ -84,7 +84,7 @@ public class TungstèneOreFeature extends OreFeature {
 
 		public boolean test(BlockState blockAt, Random random) {
 			if (base_blocks == null) {
-				base_blocks = List.of(Blocks.STONE);
+				base_blocks = List.of(Blocks.NETHERRACK);
 			}
 			return base_blocks.contains(blockAt.getBlock());
 		}

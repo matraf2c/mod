@@ -40,6 +40,6 @@ public class TungstèneOreBlock extends Block {
 		List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 		if (!dropsOriginal.isEmpty())
 			return dropsOriginal;
-		return Collections.singletonList(new ItemStack(MatrafcsModItems.TUNGSTENE_DUST.get(), 3));
+		return Collections.singletonList(new ItemStack(MatrafcsModItems.TUNGSTENE_DUST.get()));
 	}
 }

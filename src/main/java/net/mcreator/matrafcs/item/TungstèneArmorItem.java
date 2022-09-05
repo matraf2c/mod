@@ -66,7 +66,7 @@ public abstract class TungstèneArmorItem extends ArmorItem {
 
 	public static class Helmet extends TungstèneArmorItem {
 		public Helmet() {
-			super(EquipmentSlot.HEAD, new Item.Properties().tab(CreativeModeTab.TAB_COMBAT));
+			super(EquipmentSlot.HEAD, new Item.Properties().tab(CreativeModeTab.TAB_COMBAT).fireResistant());
 		}
 
 		@Override
@@ -82,7 +82,7 @@ public abstract class TungstèneArmorItem extends ArmorItem {
 
 	public static class Chestplate extends TungstèneArmorItem {
 		public Chestplate() {
-			super(EquipmentSlot.CHEST, new Item.Properties().tab(CreativeModeTab.TAB_COMBAT));
+			super(EquipmentSlot.CHEST, new Item.Properties().tab(CreativeModeTab.TAB_COMBAT).fireResistant());
 		}
 
 		@Override
@@ -93,7 +93,7 @@ public abstract class TungstèneArmorItem extends ArmorItem {
 
 	public static class Leggings extends TungstèneArmorItem {
 		public Leggings() {
-			super(EquipmentSlot.LEGS, new Item.Properties().tab(CreativeModeTab.TAB_COMBAT));
+			super(EquipmentSlot.LEGS, new Item.Properties().tab(CreativeModeTab.TAB_COMBAT).fireResistant());
 		}
 
 		@Override
@@ -104,7 +104,7 @@ public abstract class TungstèneArmorItem extends ArmorItem {
 
 	public static class Boots extends TungstèneArmorItem {
 		public Boots() {
-			super(EquipmentSlot.FEET, new Item.Properties().tab(CreativeModeTab.TAB_COMBAT));
+			super(EquipmentSlot.FEET, new Item.Properties().tab(CreativeModeTab.TAB_COMBAT).fireResistant());
 		}
 
 		@Override

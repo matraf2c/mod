@@ -46,7 +46,7 @@
     "customDrop": {
       "value": "CUSTOM:TungstèneDust"
     },
-    "dropAmount": 3,
+    "dropAmount": 1,
     "useLootTableForDrops": false,
     "requiresCorrectTool": true,
     "enchantPowerBonus": 0.0,
@@ -129,13 +129,13 @@
     "restrictionBiomes": [],
     "blocksToReplace": [
       {
-        "value": "Blocks.STONE"
+        "value": "Blocks.NETHERRACK"
       }
     ],
     "generationShape": "UNIFORM",
     "frequencyPerChunks": 11,
     "frequencyOnChunk": 7,
     "minGenerateHeight": 1,
-    "maxGenerateHeight": 63
+    "maxGenerateHeight": 120
   }
 }
