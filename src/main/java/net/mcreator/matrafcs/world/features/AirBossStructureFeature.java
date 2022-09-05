@@ -53,11 +53,11 @@ public class AirBossStructureFeature extends Feature<NoneFeatureConfiguration> {
 		if (!generate_dimensions.contains(context.level().getLevel().dimension()))
 			return false;
 		if (template == null)
-			template = context.level().getLevel().getStructureManager().getOrCreate(new ResourceLocation("matrafcs", "air_boss_structure"));
+			template = context.level().getLevel().getStructureManager().getOrCreate(new ResourceLocation("matrafcs", "air_boss_final_structure"));
 		if (template == null)
 			return false;
 		boolean anyPlaced = false;
-		if ((context.random().nextInt(1000000) + 1) <= 1200) {
+		if ((context.random().nextInt(1000000) + 1) <= 250) {
 			int count = context.random().nextInt(1) + 1;
 			for (int a = 0; a < count; a++) {
 				int i = context.origin().getX() + context.random().nextInt(16);

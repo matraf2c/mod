@@ -2,10 +2,10 @@
   "_fv": 33,
   "_type": "structure",
   "definition": {
-    "structure": "air_boss_structure",
+    "structure": "air_boss_final_structure",
     "randomlyRotateStructure": false,
     "surfaceDetectionType": "First motion blocking block",
-    "spawnProbability": 1200,
+    "spawnProbability": 250,
     "minCountPerChunk": 1,
     "maxCountPerChunk": 1,
     "spawnLocation": "Air",
