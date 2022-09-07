@@ -9,6 +9,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.mcreator.matrafcs.client.renderer.PinguinRenderer;
 import net.mcreator.matrafcs.client.renderer.DiaganRenderer;
 import net.mcreator.matrafcs.client.renderer.AirBossRenderer;
 
@@ -18,5 +19,6 @@ public class MatrafcsModEntityRenderers {
 	public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
 		event.registerEntityRenderer(MatrafcsModEntities.DIAGAN.get(), DiaganRenderer::new);
 		event.registerEntityRenderer(MatrafcsModEntities.AIR_BOSS.get(), AirBossRenderer::new);
+		event.registerEntityRenderer(MatrafcsModEntities.PINGUIN.get(), PinguinRenderer::new);
 	}
 }

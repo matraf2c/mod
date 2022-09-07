@@ -66,6 +66,8 @@ public class MatrafcsModItems {
 	public static final RegistryObject<Item> TUNGSTENE_ARMOR_LEGGINGS = REGISTRY.register("tungstene_armor_leggings",
 			() -> new TungstèneArmorItem.Leggings());
 	public static final RegistryObject<Item> TUNGSTENE_ARMOR_BOOTS = REGISTRY.register("tungstene_armor_boots", () -> new TungstèneArmorItem.Boots());
+	public static final RegistryObject<Item> PINGUIN = REGISTRY.register("pinguin_spawn_egg",
+			() -> new ForgeSpawnEggItem(MatrafcsModEntities.PINGUIN, -1, -16777216, new Item.Properties().tab(MatrafcsModTabs.TAB_MATRAF_2C)));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
