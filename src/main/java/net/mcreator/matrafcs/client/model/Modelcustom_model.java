@@ -32,31 +32,25 @@ public class Modelcustom_model<T extends Entity> extends EntityModel<T> {
 		MeshDefinition meshdefinition = new MeshDefinition();
 		PartDefinition partdefinition = meshdefinition.getRoot();
 		PartDefinition bb_main = partdefinition.addOrReplaceChild("bb_main",
-				CubeListBuilder.create().texOffs(0, 0).addBox(-6.0F, -9.0F, -6.0F, 12.0F, 9.0F, 12.0F, new CubeDeformation(0.0F)).texOffs(0, 21)
-						.addBox(-5.0F, -13.0F, -6.0F, 10.0F, 4.0F, 11.0F, new CubeDeformation(0.0F)).texOffs(0, 36)
-						.addBox(-7.0F, -7.0F, -4.0F, 1.0F, 7.0F, 8.0F, new CubeDeformation(0.0F)).texOffs(34, 31)
-						.addBox(6.0F, -7.0F, -4.0F, 1.0F, 7.0F, 8.0F, new CubeDeformation(0.0F)).texOffs(10, 36)
-						.addBox(-2.0F, -11.0F, -9.0F, 4.0F, 1.0F, 3.0F, new CubeDeformation(0.0F)).texOffs(31, 21)
-						.addBox(-4.0F, -14.0F, -5.0F, 8.0F, 1.0F, 9.0F, new CubeDeformation(0.0F)).texOffs(18, 37)
-						.addBox(-5.0F, -14.0F, -5.0F, 1.0F, 1.0F, 9.0F, new CubeDeformation(0.0F)).texOffs(36, 0)
-						.addBox(4.0F, -14.0F, -5.0F, 1.0F, 1.0F, 9.0F, new CubeDeformation(0.0F)).texOffs(0, 4)
-						.addBox(-1.0F, -3.0F, 6.0F, 2.0F, 3.0F, 1.0F, new CubeDeformation(0.0F)).texOffs(0, 2)
-						.addBox(-4.0F, 0.0F, -8.0F, 2.0F, 0.0F, 2.0F, new CubeDeformation(0.0F)).texOffs(0, 0)
-						.addBox(2.0F, 0.0F, -8.0F, 2.0F, 0.0F, 2.0F, new CubeDeformation(0.0F)),
+				CubeListBuilder.create().texOffs(0, 0).addBox(-4.0F, -10.0F, -14.0F, 10.0F, 10.0F, 28.0F, new CubeDeformation(0.0F)).texOffs(0, 0)
+						.addBox(-3.0F, -8.0F, 14.0F, 8.0F, 8.0F, 5.0F, new CubeDeformation(0.0F)).texOffs(22, 47)
+						.addBox(-1.0F, -3.0F, 19.0F, 4.0F, 3.0F, 5.0F, new CubeDeformation(0.0F)).texOffs(0, 47)
+						.addBox(-2.0F, -7.0F, -24.0F, 6.0F, 7.0F, 10.0F, new CubeDeformation(0.0F)).texOffs(0, 38)
+						.addBox(-11.0F, -2.0F, -31.0F, 22.0F, 2.0F, 7.0F, new CubeDeformation(0.0F)).texOffs(40, 47)
+						.addBox(0.0F, -13.0F, 7.0F, 2.0F, 9.0F, 4.0F, new CubeDeformation(0.0F)).texOffs(0, 20)
+						.addBox(-12.0F, -2.0F, 0.0F, 9.0F, 2.0F, 5.0F, new CubeDeformation(0.0F)).texOffs(0, 13)
+						.addBox(6.0F, -2.0F, 0.0F, 9.0F, 2.0F, 5.0F, new CubeDeformation(0.0F)),
 				PartPose.offset(0.0F, 24.0F, 0.0F));
-		PartDefinition cube_r1 = bb_main.addOrReplaceChild("cube_r1",
-				CubeListBuilder.create().texOffs(44, 38).addBox(4.0F, -14.0F, -4.0F, 1.0F, 1.0F, 8.0F, new CubeDeformation(0.0F)).texOffs(30, 46)
-						.addBox(-6.0F, -14.0F, -4.0F, 1.0F, 1.0F, 8.0F, new CubeDeformation(0.0F)),
-				PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.0F, -1.5708F, 0.0F));
 		return LayerDefinition.create(meshdefinition, 128, 128);
+	}
+
+	@Override
+	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
 	}
 
 	@Override
 	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green,
 			float blue, float alpha) {
 		bb_main.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
-	}
-
-	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
 	}
 }

@@ -10,10 +10,13 @@ import net.minecraftforge.registries.DeferredRegister;
 
 import net.minecraft.world.item.enchantment.Enchantment;
 
+import net.mcreator.matrafcs.enchantment.TECHNOBLADENEVERDIEEnchantment;
 import net.mcreator.matrafcs.enchantment.SpeedEnchantment;
 import net.mcreator.matrafcs.MatrafcsMod;
 
 public class MatrafcsModEnchantments {
 	public static final DeferredRegister<Enchantment> REGISTRY = DeferredRegister.create(ForgeRegistries.ENCHANTMENTS, MatrafcsMod.MODID);
 	public static final RegistryObject<Enchantment> SPEED = REGISTRY.register("speed", () -> new SpeedEnchantment());
+	public static final RegistryObject<Enchantment> TECHNOBLADENEVERDIE = REGISTRY.register("technobladeneverdie",
+			() -> new TECHNOBLADENEVERDIEEnchantment());
 }

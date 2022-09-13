@@ -16,7 +16,9 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
+import net.mcreator.matrafcs.entity.TechnobladeEntity;
 import net.mcreator.matrafcs.entity.PinguinEntity;
+import net.mcreator.matrafcs.entity.KillerWhaleEntity;
 import net.mcreator.matrafcs.entity.DiaganEntity;
 import net.mcreator.matrafcs.entity.AirBossEntity;
 import net.mcreator.matrafcs.MatrafcsMod;
@@ -39,6 +41,16 @@ public class MatrafcsModEntities {
 					.setUpdateInterval(3).setCustomClientFactory(PinguinEntity::new)
 
 					.sized(0.4f, 0.7f));
+	public static final RegistryObject<EntityType<TechnobladeEntity>> TECHNOBLADE = register("technoblade",
+			EntityType.Builder.<TechnobladeEntity>of(TechnobladeEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(TechnobladeEntity::new)
+
+					.sized(0.9f, 0.9f));
+	public static final RegistryObject<EntityType<KillerWhaleEntity>> KILLER_WHALE = register("killer_whale",
+			EntityType.Builder.<KillerWhaleEntity>of(KillerWhaleEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(KillerWhaleEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -50,6 +62,8 @@ public class MatrafcsModEntities {
 			DiaganEntity.init();
 			AirBossEntity.init();
 			PinguinEntity.init();
+			TechnobladeEntity.init();
+			KillerWhaleEntity.init();
 		});
 	}
 
@@ -58,5 +72,7 @@ public class MatrafcsModEntities {
 		event.put(DIAGAN.get(), DiaganEntity.createAttributes().build());
 		event.put(AIR_BOSS.get(), AirBossEntity.createAttributes().build());
 		event.put(PINGUIN.get(), PinguinEntity.createAttributes().build());
+		event.put(TECHNOBLADE.get(), TechnobladeEntity.createAttributes().build());
+		event.put(KILLER_WHALE.get(), KillerWhaleEntity.createAttributes().build());
 	}
 }

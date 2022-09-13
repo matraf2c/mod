@@ -12,9 +12,10 @@ import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
-import net.minecraft.world.entity.ai.goal.LeapAtTargetGoal;
+import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
@@ -22,33 +23,29 @@ import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.Difficulty;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
 
+import net.mcreator.matrafcs.procedures.TechnobladeEntityDiesProcedure;
 import net.mcreator.matrafcs.init.MatrafcsModEntities;
 
-import java.util.Set;
-
 @Mod.EventBusSubscriber
-public class PinguinEntity extends Monster {
-	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("frozen_ocean"), new ResourceLocation("deep_cold_ocean"),
-			new ResourceLocation("frozen_river"), new ResourceLocation("ice_spikes"), new ResourceLocation("frozen_peaks"),
-			new ResourceLocation("deep_frozen_ocean"));
-
+public class TechnobladeEntity extends Monster {
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
-		if (SPAWN_BIOMES.contains(event.getName()))
-			event.getSpawns().getSpawner(MobCategory.MISC).add(new MobSpawnSettings.SpawnerData(MatrafcsModEntities.PINGUIN.get(), 81, 10, 18));
+		event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(MatrafcsModEntities.TECHNOBLADE.get(), 20, 4, 4));
 	}
 
-	public PinguinEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(MatrafcsModEntities.PINGUIN.get(), world);
+	public TechnobladeEntity(PlayMessages.SpawnEntity packet, Level world) {
+		this(MatrafcsModEntities.TECHNOBLADE.get(), world);
 	}
 
-	public PinguinEntity(EntityType<PinguinEntity> type, Level world) {
+	public TechnobladeEntity(EntityType<TechnobladeEntity> type, Level world) {
 		super(type, world);
 		xpReward = 0;
 		setNoAi(false);
@@ -62,16 +59,26 @@ public class PinguinEntity extends Monster {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.goalSelector.addGoal(1, new RandomStrollGoal(this, 1));
+		this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, false) {
+			@Override
+			protected double getAttackReachSqr(LivingEntity entity) {
+				return (double) (4.0 + entity.getBbWidth() * entity.getBbWidth());
+			}
+		});
 		this.goalSelector.addGoal(2, new RandomStrollGoal(this, 1));
-		this.goalSelector.addGoal(3, new RandomLookAroundGoal(this));
-		this.goalSelector.addGoal(4, new FloatGoal(this));
-		this.goalSelector.addGoal(5, new LeapAtTargetGoal(this, (float) 0.5));
+		this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
+		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
+		this.goalSelector.addGoal(5, new FloatGoal(this));
 	}
 
 	@Override
 	public MobType getMobType() {
 		return MobType.UNDEFINED;
+	}
+
+	@Override
+	public SoundEvent getAmbientSound() {
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.pig.ambient"));
 	}
 
 	@Override
@@ -84,15 +91,22 @@ public class PinguinEntity extends Monster {
 		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.death"));
 	}
 
+	@Override
+	public void die(DamageSource source) {
+		super.die(source);
+		TechnobladeEntityDiesProcedure.execute(this.level, this.getX(), this.getY(), this.getZ());
+	}
+
 	public static void init() {
-		SpawnPlacements.register(MatrafcsModEntities.PINGUIN.get(), SpawnPlacements.Type.NO_RESTRICTIONS, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-				Mob::checkMobSpawnRules);
+		SpawnPlacements.register(MatrafcsModEntities.TECHNOBLADE.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+				(entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL
+						&& Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)));
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
-		builder = builder.add(Attributes.MOVEMENT_SPEED, 1);
-		builder = builder.add(Attributes.MAX_HEALTH, 5);
+		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
+		builder = builder.add(Attributes.MAX_HEALTH, 10);
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 3);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
